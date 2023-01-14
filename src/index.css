@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-poppins bg-primary dark:bg-primary_dark;
+  }
+  header {
+    @apply bg-secondary dark:bg-secondary_dark shadow-md z-[999] p-3 md:p-4 lg:p-5 flex items-center justify-between fixed top-0 left-0 right-0;
+  }
+  footer {
+    @apply bg-secondary dark:bg-secondary_dark p-3 md:p-4 lg:p-5;
+  }
+  i {
+    @apply bg-primary dark:bg-primary_dark dark:text-primary cursor-pointer  font-bold  rounded transition duration-300 hover:bg-orange hover:text-secondary;
+  }
+  input,
+  textarea {
+    @apply outline-0  dark:text-primary rounded-md p-2 text-sm md:text-base;
+  }
+
+  label {
+    @apply cursor-pointer transition duration-300 hover:text-orange font-bold dark:text-primary;
+  }
+  section {
+    @apply px-[5%] my-16;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-4xl font-bold text-center text-secondary_dark dark:text-secondary;
+  }
+
+  h3 {
+    @apply text-secondary_dark dark:text-secondary text-2xl sm:text-4xl  font-bold;
+  }
+
+  p {
+    @apply text-[#666] dark:text-primary py-4 text-sm lg:text-base;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-orange transition-all duration-300 text-xs sm:text-sm lg:text-base  text-primary rounded-md hover:tracking-[0.2rem] font-light cursor-pointer;
+  }
+  .container-box {
+    @apply bg-secondary dark:bg-secondary_dark shadow-md rounded p-3 flex flex-col items-center justify-center;
+  }
+  .quick-links {
+    @apply text-xs sm:text-sm lg:text-base dark:text-primary transition-all duration-300 font-light rounded p-1 mb-4 hover:bg-primary hover:dark:bg-primary_dark hover:text-orange hover:pl-4;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: orange !important;
+}
