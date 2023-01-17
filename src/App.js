@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     console.log("aos js started!!");
     AOS.init({
-      startEvent: "load",
+//       startEvent: "load",
       duration: 800,
       easing: "ease",
       delay: 400,
